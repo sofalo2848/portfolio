@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* padding: 20px; */ /* Removed to prevent layout shift */
+}
+
+.skills-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.skills-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.skills-section .subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.skills-category {
+  margin-bottom: 2.5rem;
+}
+
+.skills-category h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.skill {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.skill i {
+  font-size: 32px;
+  color: #f5c518;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.skill span {
+  font-size: 0.9rem;
+  color: #ddd;
+  text-align: center;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+/* Light theme styles */
+body.light-theme {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+body.light-theme .skills-section h1 {
+  color: #333;
+}
+
+body.light-theme .skills-section .subtitle {
+  color: #666;
+}
+
+body.light-theme .skills-category h2 {
+  color: #333;
+}
+
+body.light-theme .skill {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.light-theme .skill i {
+  color: #007bff;
+}
+
+body.light-theme .skill span {
+  color: #555;
+}
+
+/* .skill:hover {
+  background-color: #f5c518;
+  color: #121212;
+} */
+
+/* .skill:hover i {
+  color: #121212;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-icons {
+    justify-content: center;
+  }
+  .skill {
+    width: 80px;
+    padding: 10px 12px;
+  }
+  .skill i {
+    font-size: 28px;
+  }
+  .skill span {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 10px;
+  }
+  .skills-icons {
+    gap: 0.75rem 1rem;
+  }
+  .skill {
+    width: 70px;
+    padding: 8px 10px;
+  }
+  .skill i {
+    font-size: 24px;
+  }
+  .skill span {
+    font-size: 0.8rem;
+  }
+}
