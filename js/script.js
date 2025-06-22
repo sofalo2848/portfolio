@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     // fetch skills.html content
-    fetch('skills/skills.html')
+    fetch('skills.html')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load skills page');
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     // fetch experience.html content
-    fetch('experience/experience.html')
+    fetch('experience.html')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load experience page');
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     // fetch projects.html content
-    fetch('projects/projects.html')
+    fetch('projects.html')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load projects page');
