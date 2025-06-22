@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // add skills.css stylesheet dynamically
         skillsCssLink = document.createElement('link');
         skillsCssLink.rel = 'stylesheet';
-        skillsCssLink.href = 'skills/skills.css';
+        skillsCssLink.href = 'css/skills.css';
         document.head.appendChild(skillsCssLink);
       })
       .catch(error => {
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // add experience.css stylesheet dynamically
         experienceCssLink = document.createElement('link');
         experienceCssLink.rel = 'stylesheet';
-        experienceCssLink.href = 'experience/experience.css';
+        experienceCssLink.href = 'css/experience.css';
         document.head.appendChild(experienceCssLink);
       })
       .catch(error => {
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // add projects.css stylesheet dynamically
         projectsCssLink = document.createElement('link');
         projectsCssLink.rel = 'stylesheet';
-        projectsCssLink.href = 'projects/projects.css';
+        projectsCssLink.href = 'css/projects.css';
         document.head.appendChild(projectsCssLink);
       })
       .catch(error => {
