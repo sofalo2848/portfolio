@@ -472,3 +472,211 @@ body.light-theme .hire-me-button:hover {
     );
   }
 }
+
+/* 4K Resolution Styles */
+@media (min-width: 3000px) {
+  .experience-section {
+    max-width: 2800px;
+    padding: 40px;
+  }
+
+  .experience-section h2 {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+  }
+
+  .timeline-container {
+    gap: 6rem;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    flex: 1 1 600px;
+    max-width: 700px;
+  }
+
+  .timeline-left .job,
+  .timeline-right .job-desc {
+    margin-bottom: 5rem;
+  }
+
+  .timeline-left .job h3,
+  .timeline-right .job-desc h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-left .job .date {
+    font-size: 1.8rem;
+  }
+
+  .timeline-right .job-desc p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  .timeline-center {
+    gap: 3rem;
+    margin-top: 20px;
+  }
+
+  .timeline-center .circle {
+    width: 48px;
+    height: 48px;
+    border-width: 6px;
+  }
+
+  .timeline-center .line {
+    width: 4px;
+    height: 120px;
+  }
+
+  .hire-me-section {
+    border-radius: 60px;
+    padding: 80px 60px;
+    max-width: 2800px;
+  }
+
+  .hire-me-container {
+    gap: 6rem;
+  }
+
+  .hire-me-image-wrapper {
+    flex: 1 1 500px;
+    max-width: 600px;
+    border-radius: 60px;
+  }
+
+  .hire-me-content {
+    flex: 2 1 800px;
+  }
+
+  .hire-me-content h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .hire-me-text {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    max-width: 1000px;
+  }
+
+  .stats {
+    gap: 8rem;
+    margin-bottom: 5rem;
+  }
+
+  .stat h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Ultra 4K Resolution Styles */
+@media (min-width: 3840px) {
+  .experience-section {
+    max-width: 3600px;
+    padding: 60px;
+  }
+
+  .experience-section h2 {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .timeline-container {
+    gap: 8rem;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    flex: 1 1 800px;
+    max-width: 900px;
+  }
+
+  .timeline-left .job,
+  .timeline-right .job-desc {
+    margin-bottom: 6rem;
+  }
+
+  .timeline-left .job h3,
+  .timeline-right .job-desc h3 {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-left .job .date {
+    font-size: 2.2rem;
+  }
+
+  .timeline-right .job-desc p {
+    font-size: 2.2rem;
+    line-height: 1.7;
+  }
+
+  .timeline-center {
+    gap: 4rem;
+    margin-top: 30px;
+  }
+
+  .timeline-center .circle {
+    width: 60px;
+    height: 60px;
+    border-width: 8px;
+  }
+
+  .timeline-center .line {
+    width: 5px;
+    height: 150px;
+  }
+
+  .hire-me-section {
+    border-radius: 80px;
+    padding: 100px 80px;
+    max-width: 3600px;
+  }
+
+  .hire-me-container {
+    gap: 8rem;
+  }
+
+  .hire-me-image-wrapper {
+    flex: 1 1 600px;
+    max-width: 800px;
+    border-radius: 80px;
+  }
+
+  .hire-me-content {
+    flex: 2 1 1000px;
+  }
+
+  .hire-me-content h2 {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hire-me-text {
+    font-size: 2.4rem;
+    margin-bottom: 5rem;
+    max-width: 1200px;
+  }
+
+  .stats {
+    gap: 10rem;
+    margin-bottom: 6rem;
+  }
+
+  .stat h3 {
+    font-size: 3.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stat p {
+    font-size: 2.2rem;
+  }
+}
