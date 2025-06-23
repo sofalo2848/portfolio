@@ -1,4 +1,7 @@
-/* Additional light theme styles for sidebar, main content, and icons */
+/* main stylesheet for the portfolio website
+   handles both dark and light themes, layout, and core components */
+
+/* reset defaults and set up smooth transitions for theme switching */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +9,7 @@
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* base styles for the whole site - dark theme by default */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
@@ -15,6 +19,7 @@ body {
   /* Removed fixed height, display:flex, and overflow:hidden to allow natural page scroll */
 }
 
+/* main layout container - keeps everything centered and organized */
 .container {
   display: flex;
   /* Removed flex: 1 and overflow: hidden to allow container to size naturally */
@@ -25,7 +30,7 @@ body {
   align-items: flex-start; /* Align sidebar and main content to the top */
 }
 
-/* Sidebar */
+/* sidebar styles - the left column with profile info */
 .sidebar {
   background-color: #1e1e1e;
   border-radius: 15px;
@@ -41,10 +46,12 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* profile section in sidebar */
 .profile {
   text-align: center;
 }
 
+/* container for profile picture and status indicator */
 .avatar-wrapper {
   position: relative;
   width: 120px;
@@ -52,6 +59,7 @@ body {
   margin: 0 auto 15px;
 }
 
+/* profile picture styling */
 .avatar {
   width: 100%;
   height: 100%;
@@ -60,6 +68,7 @@ body {
   display: block;
 }
 
+/* online status indicator - the green dot */
 .status-indicator {
   position: absolute;
   bottom: 8px;
@@ -73,6 +82,7 @@ body {
   transition: border-color 0.3s ease;
 }
 
+/* name display in profile */
 .name {
   font-size: 1.5rem;
   font-weight: 700;
@@ -81,6 +91,7 @@ body {
   transition: color 0.3s ease;
 }
 
+/* job role/title badge */
 .role {
   background-color: #333333;
   color: #f5c518;
@@ -93,6 +104,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* divider line between sections */
 hr {
   border: none;
   border-top: 1px solid #333;
@@ -100,18 +112,21 @@ hr {
   transition: border-color 0.3s ease;
 }
 
+/* contact information section */
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* individual contact items (email, phone, etc) */
 .contact-item {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+/* icons for contact items */
 .icon {
   background-color: #2a2a2a;
   padding: 10px;
@@ -123,11 +138,13 @@ hr {
   transition: background-color 0.3s ease;
 }
 
+/* container for contact text */
 .contact-text {
   display: flex;
   flex-direction: column;
 }
 
+/* labels above contact info */
 .label {
   font-size: 0.65rem;
   color: #888;
@@ -137,6 +154,7 @@ hr {
   transition: color 0.3s ease;
 }
 
+/* contact links styling */
 .contact-link {
   color: #ccc;
   font-size: 0.9rem;
@@ -147,11 +165,13 @@ hr {
   transition: color 0.3s ease;
 }
 
+/* hover effect for contact links */
 .contact-link:hover {
   color: #f5c518;
   text-decoration: underline;
 }
 
+/* social media icons section */
 .social-icons {
   margin-top: 30px;
   display: flex;
@@ -159,16 +179,18 @@ hr {
   gap: 15px;
 }
 
+/* individual social media links */
 .social-link {
   color: #666;
   transition: color 0.3s ease;
 }
 
+/* hover effect for social links */
 .social-link:hover {
   color: #f5c518;
 }
 
-/* Main content */
+/* main content area - right side of the layout */
 .main-content {
   flex: 1; /* Takes remaining width in the flex container */
   background-color: #1e1e1e;
@@ -182,6 +204,7 @@ hr {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* navigation menu in main content */
 .nav-menu ul {
   list-style: none;
   display: flex;
@@ -189,6 +212,7 @@ hr {
   margin-bottom: 30px;
 }
 
+/* navigation links styling */
 .nav-menu ul li a {
   color: #ccc;
   font-weight: 600;
@@ -199,11 +223,13 @@ hr {
   transition: color 0.3s ease;
 }
 
+/* active and hover states for nav links */
 .nav-menu ul li.active a,
 .nav-menu ul li a:hover {
   color: #f5c518;
 }
 
+/* underline indicator for active nav item */
 .nav-menu ul li.active a::after {
   content: "";
   position: absolute;
@@ -215,7 +241,7 @@ hr {
   border-radius: 2px;
 }
 
-/* About Me Section */
+/* about section styling */
 .about-me h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -223,6 +249,7 @@ hr {
   color: #fff;
 }
 
+/* decorative underline for headings */
 .underline {
   width: 30px;
   height: 4px;
@@ -231,6 +258,7 @@ hr {
   margin-bottom: 20px;
 }
 
+/* about section paragraph text */
 .about-me p {
   font-size: 1rem;
   color: #ccc;
@@ -238,11 +266,12 @@ hr {
   max-width: 700px;
 }
 
-/* What I'm Doing Section */
+/* what i'm doing section */
 .doing {
   margin-top: 40px;
 }
 
+/* section heading */
 .doing h2 {
   font-size: 1.5rem;
   font-weight: 700;

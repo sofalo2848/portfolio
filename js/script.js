@@ -1,13 +1,16 @@
-// theme toggle functionality
+// main script for handling theme switching and page navigation
+// this file manages the spa-like behavior of the portfolio
+
 document.addEventListener('DOMContentLoaded', () => {
+  // grab all the theme-related elements we'll need
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   const body = document.body;
 
-  // check for saved theme preference or default to dark theme
+  // see if user had a theme preference from last time
   const savedTheme = localStorage.getItem('theme') || 'dark';
   
-  // apply the saved theme on page load
+  // let's apply their preferred theme (or dark if it's their first time)
   if (savedTheme === 'light') {
     body.classList.add('light-theme');
     setIconToSun();
@@ -16,10 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setIconToMoon();
   }
 
-  // theme toggle button click handler
+  // handle theme switching when user clicks the toggle
   themeToggleBtn.addEventListener('click', () => {
     const isLightTheme = body.classList.toggle('light-theme');
     
+    // save their choice for next time
     if (isLightTheme) {
       localStorage.setItem('theme', 'light');
       setIconToSun();
@@ -29,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // set icon to sun for light theme
+  // helper function to draw the sun icon for light theme
   function setIconToSun() {
     themeIcon.innerHTML = `
       <circle cx="12" cy="12" r="5" />
@@ -44,24 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // set icon to moon for dark theme
+  // helper function to draw the moon icon for dark theme
   function setIconToMoon() {
     themeIcon.innerHTML = `
       <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
     `;
   }
 
-  // navigation elements
+  // grab all our navigation elements for the single page app
   const navSkills = document.getElementById('nav-skills');
   const navAbout = document.getElementById('nav-about');
   const navExperience = document.getElementById('nav-experience');
   const navProjects = document.getElementById('nav-projects');
   const mainContent = document.querySelector('main.main-content');
+
+  // keep track of our dynamic stylesheets
   let skillsCssLink = null;
   let experienceCssLink = null;
   let aboutCssLink = null;
 
-  // load about section content
+  // loads the about section and cleans up any other section's styles
   function loadAboutSection() {
     fetch('about.html')
       .then(response => {
@@ -93,16 +99,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // load about.html content by default on every page load
+  // start with the about section when page loads
   loadAboutSection();
 
-  // about navigation click handler
+  // navigation handlers for each section
+  // these handle the spa-like page transitions
+
+  // about section handler
   navAbout.addEventListener('click', (e) => {
     e.preventDefault();
     loadAboutSection();
   });
 
-  // skills navigation click handler
+  // skills section handler - loads skills page and its specific styles
   navSkills.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -143,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // experience navigation click handler
+  // experience section handler - loads work history and its styles
   navExperience.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -184,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // projects navigation click handler
+  // projects section handler - shows off the portfolio work
   navProjects.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -229,17 +238,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // contact info toggle button logic for the button outside the sidebar
+  // contact info toggle functionality
+  // we have two possible contact buttons - one in main area and one in sidebar
   const mainContactToggleBtn = document.getElementById('contact-toggle-btn');
   const mainContactInfo = document.querySelector('.contact-info');
 
+  // handle the main contact toggle if it exists and isn't in the sidebar
   if (mainContactToggleBtn && mainContactInfo && !mainContactToggleBtn.closest('.sidebar')) {
     mainContactToggleBtn.addEventListener('click', () => {
       mainContactInfo.classList.toggle('active');
     });
   }
 
-  // sidebar contact info toggle logic
+  // handle the sidebar contact toggle separately
   const sidebarContactToggleBtn = document.getElementById('sidebar-contact-toggle');
   const sidebarElement = document.querySelector('.sidebar');
   

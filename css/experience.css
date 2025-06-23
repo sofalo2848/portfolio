@@ -1,4 +1,7 @@
-/* Reset and base styles */
+/* styles for the experience page
+   includes timeline layout, hire-me section, and responsive design */
+
+/* basic reset and dark theme defaults */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,12 +10,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* main experience section wrapper */
 .experience-section {
   max-width: 900px;
   margin: 0 auto 60px auto;
   padding: 20px;
 }
 
+/* section title styling */
 .experience-section h2 {
   font-weight: 700;
   margin-bottom: 2rem;
@@ -20,11 +25,13 @@ body {
   transition: color 0.3s ease;
 }
 
+/* accent color for highlighted text */
 .experience-section h1 .highlight {
   color: #f5a623;
   transition: color 0.3s ease;
 }
 
+/* timeline layout container - holds the experience history */
 .timeline-container {
   display: flex;
   justify-content: center;
@@ -33,17 +40,20 @@ body {
   flex-wrap: wrap;
 }
 
+/* left and right columns of the timeline */
 .timeline-left,
 .timeline-right {
   flex: 1 1 300px;
   max-width: 350px;
 }
 
+/* spacing for job items and descriptions */
 .timeline-left .job,
 .timeline-right .job-desc {
   margin-bottom: 2.5rem;
 }
 
+/* job title styling */
 .timeline-left .job h3,
 .timeline-right .job-desc h3 {
   font-weight: 700;
@@ -52,12 +62,14 @@ body {
   transition: color 0.3s ease;
 }
 
+/* date display for each job */
 .timeline-left .job .date {
   font-size: 0.9rem;
   color: #999bb3;
   transition: color 0.3s ease;
 }
 
+/* job description text */
 .timeline-right .job-desc p {
   font-size: 0.9rem;
   color: #999bb3;
@@ -65,6 +77,7 @@ body {
   transition: color 0.3s ease;
 }
 
+/* center line of the timeline with dots */
 .timeline-center {
   display: flex;
   flex-direction: column;
@@ -73,6 +86,7 @@ body {
   margin-top: 10px;
 }
 
+/* timeline dots/circles */
 .timeline-center .circle {
   width: 24px;
   height: 24px;
@@ -83,17 +97,20 @@ body {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* filled circle for current/highlighted positions */
 .timeline-center .circle.orange {
   background-color: #f5a623;
   border-color: #f5a623;
 }
 
+/* darker circles for past positions */
 .timeline-center .circle.dark {
   background-color: #2a2a2a;
   border-color: #2a2a2a;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* dotted line connecting timeline points */
 .timeline-center .line {
   width: 2px;
   height: 60px;
@@ -107,6 +124,7 @@ body {
   transition: background 0.3s ease;
 }
 
+/* hire me section at the bottom */
 .hire-me-section {
   border-radius: 30px;
   padding: 40px 30px;
@@ -116,6 +134,7 @@ body {
   transition: color 0.3s ease;
 }
 
+/* layout for hire me content and image */
 .hire-me-container {
   display: flex;
   align-items: center;
@@ -123,17 +142,18 @@ body {
   flex-wrap: wrap;
 }
 
+/* wrapper for the profile/hire me image */
 .hire-me-image-wrapper {
   flex: 1 1 250px;
   max-width: 300px;
   border-radius: 30px;
   overflow: hidden;
- 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* hire me section image */
 .hire-me-image {
   width: 100%;
   height: auto;
@@ -141,10 +161,12 @@ body {
   object-fit: cover;
 }
 
+/* text content in hire me section */
 .hire-me-content {
   flex: 2 1 400px;
 }
 
+/* hire me section heading */
 .hire-me-content h2 {
   font-size: 2rem;
   font-weight: 700;
@@ -153,11 +175,13 @@ body {
   transition: color 0.3s ease;
 }
 
+/* accent color in hire me heading */
 .hire-me-content h2 .highlight {
   color: #f5a623;
   transition: color 0.3s ease;
 }
 
+/* hire me section description */
 .hire-me-text {
   font-size: 1rem;
   color: #ffffff;
@@ -166,12 +190,14 @@ body {
   transition: color 0.3s ease;
 }
 
+/* stats/numbers display in hire me section */
 .stats {
   display: flex;
   gap: 4rem;
   margin-bottom: 2.5rem;
 }
 
+/* individual stat item */
 .stat h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -180,12 +206,14 @@ body {
   transition: color 0.3s ease;
 }
 
+/* stat description text */
 .stat p {
   font-size: 0.9rem;
   color: #ffffff;
   transition: color 0.3s ease;
 }
 
+/* hire me call-to-action button */
 .hire-me-button {
   background-color: transparent;
   border: 1.5px solid #ffffff;
@@ -198,12 +226,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* button hover effect */
 .hire-me-button:hover {
   background-color: #3a3a4a;
   color: #f0f2f7;
 }
 
-/* Light theme styles */
+/* light theme overrides */
 body.light-theme {
   background-color: #f8f9fa;
   color: #333;

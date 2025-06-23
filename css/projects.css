@@ -1,3 +1,7 @@
+/* styles for the projects portfolio page
+   includes project cards, hover effects, and responsive layouts */
+
+/* base styles and dark theme defaults */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,11 +10,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* main projects section container */
 .projects-section {
   max-width: 900px;
   padding: 20px;
 }
 
+/* main heading style */
 .projects-section h2 {
   font-weight: 700;
   margin-bottom: 0.25rem;
@@ -19,6 +25,7 @@ body {
   transition: color 0.3s ease;
 }
 
+/* decorative underline below heading */
 .projects-section .underline {
   width: 30px;
   height: 4px;
@@ -28,6 +35,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* section subtitle/description */
 .projects-section .subtitle {
   font-size: 1.1rem;
   color: #bbb;
@@ -36,6 +44,7 @@ body {
   transition: color 0.3s ease;
 }
 
+/* responsive grid layout for project cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -43,6 +52,7 @@ body {
   justify-items: center;
 }
 
+/* project card title */
 .project-title {
   margin-top: 8px;
   text-align: center;
@@ -51,6 +61,7 @@ body {
   transition: color 0.3s ease;
 }
 
+/* individual project card container */
 .project-card {
   border-radius: 16px;
   overflow: hidden;
@@ -64,10 +75,12 @@ body {
   user-select: none;
 }
 
+/* subtle lift effect on hover */
 .project-card:hover {
   transform: translateY(-5px);
 }
 
+/* container for project thumbnail */
 .project-image-wrapper {
   width: 100%;
   height: auto;
@@ -80,6 +93,7 @@ body {
   cursor: default;
 }
 
+/* project thumbnail image */
 .project-image {
   max-height: 100%;
   max-width: 100%;
@@ -90,12 +104,13 @@ body {
   position: relative;
 }
 
-/* Overlay styles */
+/* hover overlay container */
 .project-image-wrapper {
   position: relative;
   display: inline-block;
 }
 
+/* links overlay that appears on hover */
 .overlay {
   position: absolute;
   top: 50%;
@@ -108,15 +123,18 @@ body {
   pointer-events: none;
 }
 
+/* show overlay on hover */
 .project-image-wrapper:hover .overlay {
   opacity: 1;
   pointer-events: auto;
 }
 
+/* dim image when showing overlay */
 .project-image-wrapper:hover .project-image {
   opacity: 0.4;
 }
 
+/* styling for overlay links */
 .overlay a {
   color: #fff;
   background-color: rgba(0,0,0,0.6);
@@ -130,15 +148,18 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* hover effect for overlay links */
 .overlay a:hover {
   background-color: #f5a623;
   color: #121212;
 }
 
+/* github icon in overlay */
 .github-link i {
   font-size: 1.4rem;
 }
 
+/* project card title */
 .project-title {
   font-size: 1.2rem;
   font-weight: 600;
@@ -146,6 +167,7 @@ body {
   color: inherit;
 }
 
+/* project technologies/tools used */
 .project-subtitle {
   font-size: 1rem;
   color: #888;
@@ -154,7 +176,7 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Background color alternation */
+/* alternating card backgrounds */
 .project-card.white-bg {
   background: transparent;
   color: inherit;
@@ -165,7 +187,7 @@ body {
   color: inherit;
 }
 
-/* Light theme styles */
+/* light theme color overrides */
 body.light-theme {
   background-color: #f8f9fa;
   color: #333;
@@ -196,13 +218,14 @@ body.light-theme .overlay a:hover {
   color: #ffffff;
 }
 
-/* Responsive adjustments */
+/* responsive design breakpoints */
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
+/* mobile layout adjustments */
 @media (max-width: 480px) {
   .projects-section {
     padding: 10px;
@@ -216,7 +239,7 @@ body.light-theme .overlay a:hover {
   }
 }
 
-/* 4K Resolution Styles */
+/* large screen (4k) optimizations */
 @media (min-width: 3000px) {
   .projects-section {
     max-width: 2800px;
